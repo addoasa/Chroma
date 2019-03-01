@@ -1,0 +1,13 @@
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>  
+  <%= link_to "Log In", login_path %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Chroma</h1>
+<p>See a colorful side of music. 
+Do you associate song with color? </p>
+<%= link_to "Sign Up and Take the Test", signup_path %>
