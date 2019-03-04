@@ -1,0 +1,65 @@
+<h3> What color is this song?</h3>
+<h1> <%= @question1.name %> </h1>
+<h2> <%= @question1.artists[0].name %></h2>
+<h2> <%= @question1.album.name %></h2>
+
+
+<audio controls>
+    <source src=<%= @question1::preview_url %> type="audio/ogg">
+</audio>    
+
+
+
+<%= form_with(model: blue, local: true) do |form| %>
+    <% if blue.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(blue.errors.count, "error") %> prohibited this blue from being saved:</h2>
+  
+        <ul>
+        <% blue.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="blue field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :blue_danceability, value: @audio_features_for_quest1.danceability %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :blue_energy, value: @audio_features_for_quest1.energy %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :blue_loudness, value: @audio_features_for_quest1.loudness %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :blue_mode, value: @audio_features_for_quest1.mode %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :blue_valence, value: @audio_features_for_quest1.valence %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :blue_tempo, value:  @audio_features_for_quest1.tempo %>
+    </div>
+  
+    <div class="blue field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :blue_user_id , value:  current_user.id%>
+    </div>
+  
+    <div class="blue actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  

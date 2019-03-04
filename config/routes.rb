@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'questiontwo/index'
+
+  get 'questionone/index'
+
   get 'tracks/index'
 
   get 'tracks/show'
@@ -13,6 +17,9 @@ Rails.application.routes.draw do
   resources :greens
   resources :blues
   resources :reds
+
+  get '/questionone', to: 'questionone#index'
+
 
   get '/artists', to: 'artists#index'
   get '/artists/:id', to:'artists#show', as: 'artist'
