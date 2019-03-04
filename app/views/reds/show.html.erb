@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danceability:</strong>
+  <%= @red.danceability %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @red.energy %>
+</p>
+
+<p>
+  <strong>Loudness:</strong>
+  <%= @red.loudness %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @red.mode %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @red.valence %>
+</p>
+
+<p>
+  <strong>Tempo:</strong>
+  <%= @red.tempo %>
+</p>
+
+<%= link_to 'Edit', edit_red_path(@red) %> |
+<%= link_to 'Back', reds_path %>

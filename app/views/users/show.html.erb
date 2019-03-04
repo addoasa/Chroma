@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>First name:</strong>
+  <%= @user.firstname %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.lastname %>
 </p>
 
 <p>
@@ -10,25 +15,6 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Red:</strong>
-  <%= @user.red %>
-</p>
-
-<p>
-  <strong>Blue:</strong>
-  <%= @user.blue %>
-</p>
-
-<p>
-  <strong>Green:</strong>
-  <%= @user.green %>
-</p>
-
-<p>
-  <strong>Yellow:</strong>
-  <%= @user.yellow %>
-</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -12,8 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :user_name %>
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname, id: :user_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname, id: :user_lastname %>
   </div>
 
   <div class="field">
@@ -31,25 +36,12 @@
     <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
   </div>
 
-  # <div class="field">
-  #   <%= form.label :red %>
-  #   <%= form.text_field :red, id: :user_red %>
-  # </div>
+  <div class="field">
+    <%= form.label :what_is_your_favorite_music_genre? %>
+    <%= form.text_field :favoritegenre, id: :user_favoritegenre %>
+  </div>
 
-  # <div class="field">
-  #   <%= form.label :blue %>
-  #   <%= form.text_field :blue, id: :user_blue %>
-  # </div>
 
-  # <div class="field">
-  #   <%= form.label :green %>
-  #   <%= form.text_field :green, id: :user_green %>
-  # </div>
-
-  # <div class="field">
-  #   <%= form.label :yellow %>
-  #   <%= form.text_field :yellow, id: :user_yellow %>
-  # </div>
 
   <div class="actions">
     <%= form.submit %>

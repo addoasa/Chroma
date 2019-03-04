@@ -1,2 +1,2 @@
-json.extract! user, :id, :name, :email, :red, :blue, :green, :yellow, :created_at, :updated_at
+json.extract! user, :id, :firstname, :lastname, :email, favoritegenre, :created_at, :updated_at
 json.url user_url(user, format: :json)

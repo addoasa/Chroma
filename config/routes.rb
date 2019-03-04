@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reds
   get 'sessions/new'
 
   get 'sessions/create'
