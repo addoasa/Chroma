@@ -1,0 +1,52 @@
+<%= form_with(model: blue, local: true) do |form| %>
+  <% if blue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blue.errors.count, "error") %> prohibited this blue from being saved:</h2>
+
+      <ul>
+      <% blue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :danceability %>
+    <%= form.text_field :danceability, id: :blue_danceability %>
+  </div>
+
+  <div class="field">
+    <%= form.label :energy %>
+    <%= form.text_field :energy, id: :blue_energy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loudness %>
+    <%= form.text_field :loudness, id: :blue_loudness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mode %>
+    <%= form.text_field :mode, id: :blue_mode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valence %>
+    <%= form.text_field :valence, id: :blue_valence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tempo %>
+    <%= form.text_field :tempo, id: :blue_tempo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :red_user_id , value:  current_user.id%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

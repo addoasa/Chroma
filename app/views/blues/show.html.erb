@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danceability:</strong>
+  <%= @blue.danceability %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @blue.energy %>
+</p>
+
+<p>
+  <strong>Loudness:</strong>
+  <%= @blue.loudness %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @blue.mode %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @blue.valence %>
+</p>
+
+<p>
+  <strong>Tempo:</strong>
+  <%= @blue.tempo %>
+</p>
+
+<%= link_to 'Edit', edit_blue_path(@blue) %> |
+<%= link_to 'Back', blues_path %>

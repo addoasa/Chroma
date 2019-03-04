@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  danceability: MyString
+  energy: MyString
+  loudness: MyString
+  mode: MyString
+  valence: MyString
+  tempo: MyString
+
+two:
+  danceability: MyString
+  energy: MyString
+  loudness: MyString
+  mode: MyString
+  valence: MyString
+  tempo: MyString

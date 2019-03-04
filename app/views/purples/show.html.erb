@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danceability:</strong>
+  <%= @purple.danceability %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @purple.energy %>
+</p>
+
+<p>
+  <strong>Loudness:</strong>
+  <%= @purple.loudness %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @purple.mode %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @purple.valence %>
+</p>
+
+<p>
+  <strong>Tempo:</strong>
+  <%= @purple.tempo %>
+</p>
+
+<%= link_to 'Edit', edit_purple_path(@purple) %> |
+<%= link_to 'Back', purples_path %>

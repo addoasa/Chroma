@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danceability:</strong>
+  <%= @yellow.danceability %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @yellow.energy %>
+</p>
+
+<p>
+  <strong>Loudness:</strong>
+  <%= @yellow.loudness %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @yellow.mode %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @yellow.valence %>
+</p>
+
+<p>
+  <strong>Tempo:</strong>
+  <%= @yellow.tempo %>
+</p>
+
+<%= link_to 'Edit', edit_yellow_path(@yellow) %> |
+<%= link_to 'Back', yellows_path %>

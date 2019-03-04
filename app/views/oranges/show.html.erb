@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Danceability:</strong>
+  <%= @orange.danceability %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @orange.energy %>
+</p>
+
+<p>
+  <strong>Loudness:</strong>
+  <%= @orange.loudness %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @orange.mode %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @orange.valence %>
+</p>
+
+<p>
+  <strong>Tempo:</strong>
+  <%= @orange.tempo %>
+</p>
+
+<%= link_to 'Edit', edit_orange_path(@orange) %> |
+<%= link_to 'Back', oranges_path %>

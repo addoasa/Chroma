@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
+  get 'tracks/index'
+
+  get 'tracks/show'
+
+  get 'artists/index'
+
+  get 'artists/show'
+
+  resources :purples
+  resources :oranges
+  resources :yellows
+  resources :greens
+  resources :blues
   resources :reds
-  get 'sessions/new'
+
+  get '/artists', to: 'artists#index'
+  get '/artists/:id', to:'artists#show', as: 'artist'
+
+  get '/tracks', to: 'tracks#index'
+  get '/artists/:id', to:'tracks#show', as: 'track'
+
+ get 'sessions/new'
 
   get 'sessions/create'
 
