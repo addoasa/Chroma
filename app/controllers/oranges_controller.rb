@@ -28,7 +28,7 @@ class OrangesController < ApplicationController
 
     respond_to do |format|
       if @orange.save
-        format.html { redirect_to @orange, notice: 'Orange was successfully created.' }
+        format.html { redirect_to request.referrer, notice: 'Orange was successfully created.' }
         format.json { render :show, status: :created, location: @orange }
       else
         format.html { render :new }

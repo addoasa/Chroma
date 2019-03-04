@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :reds
 
   get '/questionone', to: 'questionone#index'
+  get '/questiontwo', to: 'questiontwo#index'
 
 
   get '/artists', to: 'artists#index'

@@ -28,7 +28,7 @@ class GreensController < ApplicationController
 
     respond_to do |format|
       if @green.save
-        format.html { redirect_to @green, notice: 'Green was successfully created.' }
+        format.html { redirect_to request.referrer, notice: 'Green was successfully created.' }
         format.json { render :show, status: :created, location: @green }
       else
         format.html { render :new }

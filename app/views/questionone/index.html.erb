@@ -10,6 +10,269 @@
 
 
 
+
+<%# -------------------------------------------------------------------------------------------------------------%>
+<%# Form for Red Answer Choice %>
+<%# -------------------------------------------------------------------------------------------------------------%>
+
+
+
+<%= form_with(model: red, local: true) do |form| %>
+    <% if red.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(red.errors.count, "error") %> prohibited this red from being saved:</h2>
+  
+        <ul>
+        <% red.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="red field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :red_danceability, value: @audio_features_for_quest1.danceability %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :red_energy, value: @audio_features_for_quest1.energy %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :red_loudness, value: @audio_features_for_quest1.loudness %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :red_mode, value: @audio_features_for_quest1.mode %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :red_valence, value: @audio_features_for_quest1.valence %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :red_tempo, value: @audio_features_for_quest1.tempo %>
+    </div>
+  
+    <div class="red field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :red_user_id , value:  current_user.id%>
+    </div>
+  
+    <div class="red-btn actions">
+      <%= form.submit Red%>
+    </div>
+  <% end %>
+  
+  
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+
+
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# Form for Orange Answer Choice %>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  
+
+  <%= form_with(model: orange, local: true) do |form| %>
+    <% if orange.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(orange.errors.count, "error") %> prohibited this orange from being saved:</h2>
+  
+        <ul>
+        <% orange.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="orange field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :orange_danceability, value: @audio_features_for_quest1.danceability %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :orange_energy, value: @audio_features_for_quest1.energy  %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :orange_loudness, value: @audio_features_for_quest1.loudness %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :orange_mode, value: @audio_features_for_quest1.mode      %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :orange_valence, value: @audio_features_for_quest1.valence %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :orange_tempo, value: @audio_features_for_quest1.tempo      %>
+    </div>
+  
+    <div class="orange field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :orange_user_id , value:  current_user.id%>
+    </div>
+    
+    <div class="orange-btn actions">
+      <%= form.submit Orange%>
+    </div>
+  <% end %>
+  
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+
+
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# Form for Yellow Answer Choice %>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  
+
+  <%= form_with(model: yellow, local: true) do |form| %>
+    <% if yellow.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(yellow.errors.count, "error") %> prohibited this yellow from being saved:</h2>
+  
+        <ul>
+        <% yellow.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="yellow field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :yellow_danceability, value: @audio_features_for_quest1.danceability     %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :yellow_energy, value: @audio_features_for_quest1.energy %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :yellow_loudness, value: @audio_features_for_quest1.loudness     %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :yellow_mode, value: @audio_features_for_quest1.mode     %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :yellow_valence, value: @audio_features_for_quest1.valence     %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :yellow_tempo, value: @audio_features_for_quest1.tempo     %>
+    </div>
+  
+    <div class="yellow field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :yellow_user_id , value:  current_user.id%>
+    </div>
+  
+    <div class="yellow-btn actions">
+      <%= form.submit Yellow %>
+    </div>
+  <% end %>
+  
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# Form for Green Answer Choice %>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  
+  <%= form_with(model: green, local: true) do |form| %>
+    <% if green.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(green.errors.count, "error") %> prohibited this green from being saved:</h2>
+  
+        <ul>
+        <% green.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="green field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :green_danceability, value: @audio_features_for_quest1.danceability      %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :green_energy, value: @audio_features_for_quest1.energy      %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :green_loudness, value: @audio_features_for_quest1.loudness      %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :green_mode, value: @audio_features_for_quest1.mode    %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :green_valence, value: @audio_features_for_quest1.valence      %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :green_tempo, value: @audio_features_for_quest1.tempo      %>
+    </div>
+  
+    <div class="green field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :green_user_id , value:  current_user.id%>
+    </div>
+  
+    <div class="green-btn actions">
+      <%= form.submit Green %>
+      
+    </div>
+  <% end %>
+  
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# Form for Blue Answer Choice %>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  
+
+
 <%= form_with(model: blue, local: true) do |form| %>
     <% if blue.errors.any? %>
       <div id="error_explanation">
@@ -58,8 +321,78 @@
       <%= form.hidden_field :user_id, id: :blue_user_id , value:  current_user.id%>
     </div>
   
-    <div class="blue actions">
-      <%= form.submit %>
+    <div class="blue-btn actions">
+      <%= form.submit Blue %>
     </div>
   <% end %>
   
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+
+  
+  
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# Form for Purple Answer Choice %>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  
+
+
+  <%= form_with(model: purple, local: true) do |form| %>
+    <% if purple.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(purple.errors.count, "error") %> prohibited this purple from being saved:</h2>
+  
+        <ul>
+        <% purple.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="purple field">
+      <%= form.label :danceability %>
+      <%= form.hidden_field :danceability, id: :purple_danceability, value: @audio_features_for_quest1.danceability  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :energy %>
+      <%= form.hidden_field :energy, id: :purple_energy, value: @audio_features_for_quest1.energy  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :loudness %>
+      <%= form.hidden_field :loudness, id: :purple_loudness, value: @audio_features_for_quest1.loudness  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :mode %>
+      <%= form.hidden_field :mode, id: :purple_mode, value: @audio_features_for_quest1.mode  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :valence %>
+      <%= form.hidden_field :valence, id: :purple_valence, value: @audio_features_for_quest1.valence  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :tempo %>
+      <%= form.hidden_field :tempo, id: :purple_tempo, value: @audio_features_for_quest1.tempo  %>
+    </div>
+  
+    <div class="purple field">
+      <%= form.label :user_id %>
+      <%= form.hidden_field :user_id, id: :purple_user_id , value:  current_user.id%>
+    </div>
+  
+    <div class="purple-btn actions">
+      <%= form.submit Purple %>
+    </div>
+  <% end %>
+  
+
+  <%# -------------------------------------------------------------------------------------------------------------%>
+  <%# -------------------------------------------------------------------------------------------------------------%>
+
+  <h2><%= link_to "Next Question", '/questiontwo' %></h2>

@@ -28,7 +28,7 @@ class RedsController < ApplicationController
 
     respond_to do |format|
       if @red.save
-        format.html { redirect_to @red, notice: 'Red was successfully created.' }
+        format.html { redirect_to request.referrer, notice: 'Red was successfully created.' }
         format.json { render :show, status: :created, location: @red }
       else
         format.html { render :new }

@@ -28,7 +28,7 @@ class BluesController < ApplicationController
 
     respond_to do |format|
       if @blue.save
-        format.html { redirect_to @blue, notice: 'Blue was successfully created.' }
+        format.html { redirect_to request.referrer, notice: 'Blue was successfully created.' }
         format.json { render :show, status: :created, location: @blue }
       else
         format.html { render :new }
