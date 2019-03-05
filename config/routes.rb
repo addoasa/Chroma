@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'questionsix/index'
+
+  get 'questionfive/index'
+
+  get 'questionfour/index'
+
+  get 'questionthree/index'
+
   get 'questiontwo/index'
 
   get 'questionone/index'
@@ -20,6 +28,10 @@ Rails.application.routes.draw do
 
   get '/questionone', to: 'questionone#index'
   get '/questiontwo', to: 'questiontwo#index'
+  get '/questionthree', to: 'questionthree#index'
+  get '/questionfour', to: 'questionfour#index'
+  get '/questionfive', to: 'questionfive#index'
+  get '/questionsix', to: 'questionsix#index'
 
 
   get '/artists', to: 'artists#index'

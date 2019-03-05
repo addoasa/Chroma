@@ -1,11 +1,11 @@
 <h3> What color is this song?</h3>
-<h1> <%= @question2.name %> </h1>
-<h2> <%= @question2.artists[0].name %></h2>
-<h2> <%= @question2.album.name %></h2>
+<h1> <%= @question4.name %> </h1>
+<h2> <%= @question4.artists[0].name %></h2>
+<h2> <%= @question4.album.name %></h2>
 
 
 <audio controls>
-    <source src=<%= @question2::preview_url %> type="audio/ogg">
+    <source src=<%= @question4::preview_url %> type="audio/ogg">
 </audio>    
 
 
@@ -32,32 +32,32 @@
   
     <div class="red field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :red_danceability, value: @audio_features_for_quest2.danceability %>
+      <%= form.hidden_field :danceability, id: :red_danceability, value: @audio_features_for_quest4.danceability %>
     </div>
   
     <div class="red field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :red_energy, value: @audio_features_for_quest2.energy %>
+      <%= form.hidden_field :energy, id: :red_energy, value: @audio_features_for_quest4.energy %>
     </div>
   
     <div class="red field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :red_loudness, value: @audio_features_for_quest2.loudness %>
+      <%= form.hidden_field :loudness, id: :red_loudness, value: @audio_features_for_quest4.loudness %>
     </div>
   
     <div class="red field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :red_mode, value: @audio_features_for_quest2.mode %>
+      <%= form.hidden_field :mode, id: :red_mode, value: @audio_features_for_quest4.mode %>
     </div>
   
     <div class="red field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :red_valence, value: @audio_features_for_quest2.valence %>
+      <%= form.hidden_field :valence, id: :red_valence, value: @audio_features_for_quest4.valence %>
     </div>
   
     <div class="red field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :red_tempo, value: @audio_features_for_quest2.tempo %>
+      <%= form.hidden_field :tempo, id: :red_tempo, value: @audio_features_for_quest4.tempo %>
     </div>
   
     <div class="red field">
@@ -97,32 +97,32 @@
   
     <div class="orange field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :orange_danceability, value: @audio_features_for_quest2.danceability %>
+      <%= form.hidden_field :danceability, id: :orange_danceability, value: @audio_features_for_quest4.danceability %>
     </div>
   
     <div class="orange field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :orange_energy, value: @audio_features_for_quest2.energy  %>
+      <%= form.hidden_field :energy, id: :orange_energy, value: @audio_features_for_quest4.energy  %>
     </div>
   
     <div class="orange field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :orange_loudness, value: @audio_features_for_quest2.loudness %>
+      <%= form.hidden_field :loudness, id: :orange_loudness, value: @audio_features_for_quest4.loudness %>
     </div>
   
     <div class="orange field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :orange_mode, value: @audio_features_for_quest2.mode      %>
+      <%= form.hidden_field :mode, id: :orange_mode, value: @audio_features_for_quest4.mode      %>
     </div>
   
     <div class="orange field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :orange_valence, value: @audio_features_for_quest2.valence %>
+      <%= form.hidden_field :valence, id: :orange_valence, value: @audio_features_for_quest4.valence %>
     </div>
   
     <div class="orange field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :orange_tempo, value: @audio_features_for_quest2.tempo      %>
+      <%= form.hidden_field :tempo, id: :orange_tempo, value: @audio_features_for_quest4.tempo      %>
     </div>
   
     <div class="orange field">
@@ -162,32 +162,32 @@
   
     <div class="yellow field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :yellow_danceability, value: @audio_features_for_quest2.danceability     %>
+      <%= form.hidden_field :danceability, id: :yellow_danceability, value: @audio_features_for_quest4.danceability     %>
     </div>
   
     <div class="yellow field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :yellow_energy, value: @audio_features_for_quest2.energy %>
+      <%= form.hidden_field :energy, id: :yellow_energy, value: @audio_features_for_quest4.energy %>
     </div>
   
     <div class="yellow field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :yellow_loudness, value: @audio_features_for_quest2.loudness     %>
+      <%= form.hidden_field :loudness, id: :yellow_loudness, value: @audio_features_for_quest4.loudness     %>
     </div>
   
     <div class="yellow field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :yellow_mode, value: @audio_features_for_quest2.mode     %>
+      <%= form.hidden_field :mode, id: :yellow_mode, value: @audio_features_for_quest4.mode     %>
     </div>
   
     <div class="yellow field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :yellow_valence, value: @audio_features_for_quest2.valence     %>
+      <%= form.hidden_field :valence, id: :yellow_valence, value: @audio_features_for_quest4.valence     %>
     </div>
   
     <div class="yellow field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :yellow_tempo, value: @audio_features_for_quest2.tempo     %>
+      <%= form.hidden_field :tempo, id: :yellow_tempo, value: @audio_features_for_quest4.tempo     %>
     </div>
   
     <div class="yellow field">
@@ -223,32 +223,32 @@
   
     <div class="green field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :green_danceability, value: @audio_features_for_quest2.danceability      %>
+      <%= form.hidden_field :danceability, id: :green_danceability, value: @audio_features_for_quest4.danceability      %>
     </div>
   
     <div class="green field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :green_energy, value: @audio_features_for_quest2.energy      %>
+      <%= form.hidden_field :energy, id: :green_energy, value: @audio_features_for_quest4.energy      %>
     </div>
   
     <div class="green field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :green_loudness, value: @audio_features_for_quest2.loudness      %>
+      <%= form.hidden_field :loudness, id: :green_loudness, value: @audio_features_for_quest4.loudness      %>
     </div>
   
     <div class="green field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :green_mode, value: @audio_features_for_quest2.mode    %>
+      <%= form.hidden_field :mode, id: :green_mode, value: @audio_features_for_quest4.mode    %>
     </div>
   
     <div class="green field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :green_valence, value: @audio_features_for_quest2.valence      %>
+      <%= form.hidden_field :valence, id: :green_valence, value: @audio_features_for_quest4.valence      %>
     </div>
   
     <div class="green field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :green_tempo, value: @audio_features_for_quest2.tempo      %>
+      <%= form.hidden_field :tempo, id: :green_tempo, value: @audio_features_for_quest4.tempo      %>
     </div>
   
     <div class="green field">
@@ -288,32 +288,32 @@
   
     <div class="blue field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :blue_danceability, value: @audio_features_for_quest2.danceability %>
+      <%= form.hidden_field :danceability, id: :blue_danceability, value: @audio_features_for_quest4.danceability %>
     </div>
   
     <div class="blue field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :blue_energy, value: @audio_features_for_quest2.energy %>
+      <%= form.hidden_field :energy, id: :blue_energy, value: @audio_features_for_quest4.energy %>
     </div>
   
     <div class="blue field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :blue_loudness, value: @audio_features_for_quest2.loudness %>
+      <%= form.hidden_field :loudness, id: :blue_loudness, value: @audio_features_for_quest4.loudness %>
     </div>
   
     <div class="blue field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :blue_mode, value: @audio_features_for_quest2.mode %>
+      <%= form.hidden_field :mode, id: :blue_mode, value: @audio_features_for_quest4.mode %>
     </div>
   
     <div class="blue field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :blue_valence, value: @audio_features_for_quest2.valence %>
+      <%= form.hidden_field :valence, id: :blue_valence, value: @audio_features_for_quest4.valence %>
     </div>
   
     <div class="blue field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :blue_tempo, value:  @audio_features_for_quest2.tempo %>
+      <%= form.hidden_field :tempo, id: :blue_tempo, value:  @audio_features_for_quest4.tempo %>
     </div>
   
     <div class="blue field">
@@ -353,32 +353,32 @@
   
     <div class="purple field">
       <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :purple_danceability, value: @audio_features_for_quest2.danceability  %>
+      <%= form.hidden_field :danceability, id: :purple_danceability, value: @audio_features_for_quest4.danceability  %>
     </div>
   
     <div class="purple field">
       <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :purple_energy, value: @audio_features_for_quest2.energy  %>
+      <%= form.hidden_field :energy, id: :purple_energy, value: @audio_features_for_quest4.energy  %>
     </div>
   
     <div class="purple field">
       <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :purple_loudness, value: @audio_features_for_quest2.loudness  %>
+      <%= form.hidden_field :loudness, id: :purple_loudness, value: @audio_features_for_quest4.loudness  %>
     </div>
   
     <div class="purple field">
       <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :purple_mode, value: @audio_features_for_quest2.mode  %>
+      <%= form.hidden_field :mode, id: :purple_mode, value: @audio_features_for_quest4.mode  %>
     </div>
   
     <div class="purple field">
       <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :purple_valence, value: @audio_features_for_quest2.valence  %>
+      <%= form.hidden_field :valence, id: :purple_valence, value: @audio_features_for_quest4.valence  %>
     </div>
   
     <div class="purple field">
       <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :purple_tempo, value: @audio_features_for_quest2.tempo  %>
+      <%= form.hidden_field :tempo, id: :purple_tempo, value: @audio_features_for_quest4.tempo  %>
     </div>
   
     <div class="purple field">
@@ -395,4 +395,4 @@
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
 
-  <h2><%= link_to "Next Question", '/questionthree' %></h2>
+  <h2><%= link_to "Next Question", '/questionfive' %></h2>
