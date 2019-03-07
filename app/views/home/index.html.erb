@@ -1,13 +1,37 @@
+<div class="background">
+<main class="home-container">
 <% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log Out", logout_path %>
+  <h3 class= "welcome"> Welcome <%= current_user.firstname %>! 
+ <h3 class="home-logout-btn"> <%= link_to "Log Out", logout_path %> </h3>
 <% else %>  
-  <%= link_to "Log In", login_path %>
-<% end %>
+<div class="home-container"> 
+ <h3 class="home-login-btn">  <%= link_to "Log In", login_path %> </h3>
+  <% end %>
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<h1>Chroma</h1>
-<p>See a colorful side of music. 
-Do you associate song with color? </p>
-<%= link_to "Sign Up and Take the Test", signup_path %>
+  <h1 class= "home-title">Chroma</h1>
+  <p class="home-description"> Do you associate song with color? </p>
+
+
+
+<section class="listen-section">
+  <% if current_user %>
+    <h2 class="home-listen"> <%= link_to "LISTEN", '/tracks' %> </h2>
+    <p class="home-listen-paragraph"> Listen to your personal color playlists </ br> based on your answers</p>
+  <% else %>  
+  <% end %>
+  <div class="circle1"></div>
+</section>
+
+  <section class="quiz-section">
+      <h1 class="getstarted">GET STARTED</h1>
+      <% if current_user %>
+      <h2 class="take-quiz"> <%= link_to "Take the Chroma Test", '/questionone' %> </h2>
+      <p>If colors have similar emotional associations, <br> people should be able to match colors and songs <br> that contain overlapping emotional qualities. </p>
+    <% else %>  
+      <h2 class= "signup-quiz"> <%= link_to "Sign Up To Take the Test", signup_path %> </h2>
+    <% end %>
+  </section>
+</main>
+</div>

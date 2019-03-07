@@ -1,6 +1,11 @@
 // Place all the styles related to the questionone controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.quiz-container{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .blue{
     display: none;
 }
@@ -19,3 +24,154 @@
 .orange{
     display: none;
 }
+
+
+.question-player{
+    width: 550px ;
+    padding-top: 15px;
+}
+
+
+.question-info{
+    text-align: center;
+    padding-top: 14px;
+}
+
+.question-info h1{
+    font-weight: 300;
+    font-size: 16pt;
+}
+
+.question-info h2{
+    font-weight: 200;
+    font-size: 12pt;
+}
+
+.question-info h2{
+    font-weight: 200;
+    font-size: 12pt;
+
+}
+
+.line-question1{
+    margin-top:20px; 
+    width:80vw;
+    height:0.3px;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.line-question2{
+    margin-top:30px; 
+    width:80vw;
+    height:0.3px;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.ask{
+    padding-top: 10px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.color-choices{
+    display:flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.red-btn input{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.blue-btn input{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.green-btn input{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.orange-btn input{
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.yellow-btn input{
+    background-color: rgb(255, 255, 0);
+    border: none;
+    color: rgba(0,0,0,0.5);
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+.purple-btn input{
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+
+.next-song{
+    margin: 0 auto;
+    width:66%;
+    text-align: center;
+    padding-top: 15px;
+    height:35px;
+    font-size: 10pt;
+    // border: solid rgba(0,0,0,0.2) 6pt;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient( rgba(0,0,0,0.86),rgba(0,0,0,0.9) , rgba(0,0,0,0.75));
+    transition:0.3s;
+    color:rgba(255,255,255,0.7);
+    margin-top: 120px ;
+
+
+}
+
+.next-song a{
+    color:rgba(255,255,255,0.6);
+    font-size: 15pt;
+}
+
+.next-song:hover{
+    color:rgba(0,0,0,0.7);
+
+}
+
+

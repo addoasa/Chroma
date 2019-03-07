@@ -1,75 +1,80 @@
-<h3> What color is this song?</h3>
-<h1> <%= @question1.name %> </h1>
-<h2> <%= @question1.artists[0].name %></h2>
-<h2> <%= @question1.album.name %></h2>
+ <main class="quiz-container">  
+  <section class="question-info">
+    <h1>Song: <%= @question1.name %> </h1>
+    <h2>Artist: <%= @question1.artists[0].name %></h2>
+    <h2>Album: <%= @question1.album.name %></h2>
+    <audio controls class="question-player">
+      <source src=<%= @question1::preview_url %> type="audio/ogg">
+    </audio>
+  </section>
+   
 
+<hr class="line-question1">
 
-<audio controls>
-    <source src=<%= @question1::preview_url %> type="audio/ogg">
-</audio>    
+<h3 class="ask"> What color is this song?</h3>
 
-
-
+<hr class="line-question2">
 
 <%# -------------------------------------------------------------------------------------------------------------%>
 <%# Form for Red Answer Choice %>
 <%# -------------------------------------------------------------------------------------------------------------%>
+<div class="color-choices">
 
+<section>
 
-
-<%= form_with(model: red, local: true) do |form| %>
-    <% if red.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(red.errors.count, "error") %> prohibited this red from being saved:</h2>
-  
-        <ul>
-        <% red.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+    <%= form_with(model: red, local: true) do |form| %>
+        <% if red.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(red.errors.count, "error") %> prohibited this red from being saved:</h2>
+      
+            <ul>
+            <% red.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
         <% end %>
-        </ul>
-      </div>
-    <% end %>
-  
-    <div class="red field">
-      <%= form.label :danceability %>
-      <%= form.hidden_field :danceability, id: :red_danceability, value: @audio_features_for_quest1.danceability %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :energy %>
-      <%= form.hidden_field :energy, id: :red_energy, value: @audio_features_for_quest1.energy %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :loudness %>
-      <%= form.hidden_field :loudness, id: :red_loudness, value: @audio_features_for_quest1.loudness %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :mode %>
-      <%= form.hidden_field :mode, id: :red_mode, value: @audio_features_for_quest1.mode %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :valence %>
-      <%= form.hidden_field :valence, id: :red_valence, value: @audio_features_for_quest1.valence %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :tempo %>
-      <%= form.hidden_field :tempo, id: :red_tempo, value: @audio_features_for_quest1.tempo %>
-    </div>
-  
-    <div class="red field">
-      <%= form.label :user_id %>
-      <%= form.hidden_field :user_id, id: :red_user_id , value:  current_user.id%>
-    </div>
-  
-    <div class="red-btn actions">
-      <%= form.submit Red%>
-    </div>
-  <% end %>
-  
+      
+        <div class="red field">
+          <%= form.label :danceability %>
+          <%= form.hidden_field :danceability, id: :red_danceability, value: @audio_features_for_quest1.danceability %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :energy %>
+          <%= form.hidden_field :energy, id: :red_energy, value: @audio_features_for_quest1.energy %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :loudness %>
+          <%= form.hidden_field :loudness, id: :red_loudness, value: @audio_features_for_quest1.loudness %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :mode %>
+          <%= form.hidden_field :mode, id: :red_mode, value: @audio_features_for_quest1.mode %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :valence %>
+          <%= form.hidden_field :valence, id: :red_valence, value: @audio_features_for_quest1.valence %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :tempo %>
+          <%= form.hidden_field :tempo, id: :red_tempo, value: @audio_features_for_quest1.tempo %>
+        </div>
+      
+        <div class="red field">
+          <%= form.label :user_id %>
+          <%= form.hidden_field :user_id, id: :red_user_id , value:  current_user.id%>
+        </div>
+      
+        <div class="red-btn actions">
+          <%= form.submit Red%>
+        </div>
+      <% end %>
+  </section>
   
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
@@ -81,7 +86,7 @@
   <%# Form for Orange Answer Choice %>
   <%# -------------------------------------------------------------------------------------------------------------%>
   
-
+<section>
   <%= form_with(model: orange, local: true) do |form| %>
     <% if orange.errors.any? %>
       <div id="error_explanation">
@@ -134,7 +139,7 @@
       <%= form.submit Orange%>
     </div>
   <% end %>
-  
+  </section>
 
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
@@ -145,7 +150,7 @@
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# Form for Yellow Answer Choice %>
   <%# -------------------------------------------------------------------------------------------------------------%>
-  
+  <section>
 
   <%= form_with(model: yellow, local: true) do |form| %>
     <% if yellow.errors.any? %>
@@ -199,7 +204,7 @@
       <%= form.submit Yellow %>
     </div>
   <% end %>
-  
+  </section>
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
 
@@ -208,6 +213,8 @@
   <%# Form for Green Answer Choice %>
   <%# -------------------------------------------------------------------------------------------------------------%>
   
+<section>
+
   <%= form_with(model: green, local: true) do |form| %>
     <% if green.errors.any? %>
       <div id="error_explanation">
@@ -262,7 +269,7 @@
     </div>
   <% end %>
   
-
+</section>
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
 
@@ -271,7 +278,7 @@
   <%# Form for Blue Answer Choice %>
   <%# -------------------------------------------------------------------------------------------------------------%>
   
-
+<section>
 
 <%= form_with(model: blue, local: true) do |form| %>
     <% if blue.errors.any? %>
@@ -326,6 +333,7 @@
     </div>
   <% end %>
   
+  </section>
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
 
@@ -336,7 +344,7 @@
   <%# Form for Purple Answer Choice %>
   <%# -------------------------------------------------------------------------------------------------------------%>
   
-
+<section>
 
   <%= form_with(model: purple, local: true) do |form| %>
     <% if purple.errors.any? %>
@@ -391,8 +399,14 @@
     </div>
   <% end %>
   
+</section>
+</section>
 
   <%# -------------------------------------------------------------------------------------------------------------%>
   <%# -------------------------------------------------------------------------------------------------------------%>
+</div>
+  <h2 class="next-song"><%= link_to "Next Question", '/questiontwo' %></h2>
 
-  <h2><%= link_to "Next Question", '/questiontwo' %></h2>
+
+
+  </main>

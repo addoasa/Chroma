@@ -1,3 +1,12 @@
+<% @rhead=Red.find_by user_id: current_user.id %>
+<% @grean=Green.find_by user_id: current_user.id %>
+<% @jelo=Yellow.find_by user_id: current_user.id %>
+<% @perpul=Purple.find_by user_id: current_user.id %>
+<% @arange=Orange.find_by user_id: current_user.id %>
+<% @bloo=Blue.find_by user_id: current_user.id %>
+
+
+<a href="/">HOME</a>
 <h1 >Search Artists</h1>
 
 <div>
@@ -13,3 +22,226 @@
   <% end %>
 
 </div>
+
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+       <%# Conditions For Customized BLUE PLAYLIST %>
+  <%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+  <h2>Blue:</h2>
+
+<ul> 
+ <% @bloo=Blue.find_by user_id: current_user.id %>
+      
+   <% if @bloo%>
+ <% @alltracks.each do |track| %>
+  
+    <% if RSpotify::AudioFeatures.find(track::id).tempo > @bloo.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).tempo < @bloo.tempo.to_f + 2 && RSpotify::AudioFeatures.find(track::id).danceability > @bloo.danceability.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).danceability < @bloo.danceability.to_f + 2 && RSpotify::AudioFeatures.find(track::id).energy > @bloo.energy.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).energy < @bloo.energy.to_f + 2 && RSpotify::AudioFeatures.find(track::id).loudness > @bloo.loudness.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).loudness < @bloo.loudness.to_f + 2 && RSpotify::AudioFeatures.find(track::id).tempo > @bloo.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).mode == @bloo.mode && RSpotify::AudioFeatures.find(track::id).valence > @bloo.valence.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).valence < @bloo.valence.to_f + 2%>
+          <li><%= track::name %>  </li>
+          <li><%= track::artists[0].name %>  </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+          <audio controls>
+              <source src=<%= track::preview_url %> type="audio/ogg">
+          </audio> 
+    <% end %>  
+   <% end %>
+    
+   <% else %>
+   <h6> It appears you do not have any blue colored tracks </h6>
+    <% end %>
+</ul>
+
+
+
+
+
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%# Conditions For Customized RED PLAYLIST %>
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+<h2>Red:</h2>
+
+<ul>
+<% @rhead=Red.find_by user_id: current_user.id %>
+   
+   <% if @rhead %>
+    <% @alltracks.each do |track| %>
+    
+    <% if RSpotify::AudioFeatures.find(track::id).tempo > @rhead.tempo.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).tempo < @rhead.tempo.to_f + 50 && RSpotify::AudioFeatures.find(track::id).danceability > @rhead.danceability.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).danceability < @rhead.danceability.to_f + 50 && RSpotify::AudioFeatures.find(track::id).energy > @rhead.energy.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).energy < @rhead.energy.to_f + 50 && RSpotify::AudioFeatures.find(track::id).loudness > @rhead.loudness.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).loudness < @rhead.loudness.to_f + 50 && RSpotify::AudioFeatures.find(track::id).tempo > @rhead.tempo.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).mode == @rhead.mode && RSpotify::AudioFeatures.find(track::id).valence > @rhead.valence.to_f - 50 &&  RSpotify::AudioFeatures.find(track::id).valence < @rhead.valence.to_f + 50%>
+          <li><%= track::name %>  </li>
+          <li><%= track::artists[0].name %>  </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+          <audio controls>
+              <source src=<%= track::preview_url %> type="audio/ogg">
+          </audio> 
+    <% end %>
+
+  <% end %>
+    
+  <% else %>
+  <h6> It appears you do not have any red colored tracks </h6>
+    <% end %>
+</ul>
+
+
+
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%#Conditions For Customized ORANGE PLAYLIST %>
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+<h2>Orange:</h2>
+
+<ul>
+<% @arange=Orange.find_by user_id: current_user.id %>
+    <% if @arange %>
+ <% @alltracks.each do |track| %>
+   
+    
+  
+    <% if RSpotify::AudioFeatures.find(track::id).tempo > @arange.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).tempo < @arange.tempo.to_f + 2 && RSpotify::AudioFeatures.find(track::id).danceability > @arange.danceability.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).danceability < @arange.danceability.to_f + 2 && RSpotify::AudioFeatures.find(track::id).energy > @arange.energy.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).energy < @arange.energy.to_f + 2 && RSpotify::AudioFeatures.find(track::id).loudness > @arange.loudness.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).loudness < @arange.loudness.to_f + 2 && RSpotify::AudioFeatures.find(track::id).tempo > @arange.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).mode == @arange.mode && RSpotify::AudioFeatures.find(track::id).valence > @arange.valence.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).valence < @arange.valence.to_f + 2%>
+          <li><%= track::name %>  </li>
+          <li><%= track::artists[0].name %>  </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+          <audio controls>
+              <source src=<%= track::preview_url %> type="audio/ogg">
+          </audio> 
+    <% end %>
+
+  <% end %>
+  
+    
+  <% else %>
+  <h6> It appears you do not have any orange colored tracks </h6>
+<% end %>
+</ul>
+
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%# Conditions For Customized YELLOW PLAYLIST %>
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+<h2>Yellow:</h2>
+
+<ul>
+<% @jelo=Yellow.find_by user_id: current_user.id %>
+<% if @jelo %>
+
+
+ <% @alltracks.each do |track| %>
+  
+      
+    <% if RSpotify::AudioFeatures.find(track::id).tempo > @jelo.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).tempo < @jelo.tempo.to_f + 2 && RSpotify::AudioFeatures.find(track::id).danceability > @jelo.danceability.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).danceability < @jelo.danceability.to_f + 2 && RSpotify::AudioFeatures.find(track::id).energy > @jelo.energy.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).energy < @jelo.energy.to_f + 2 && RSpotify::AudioFeatures.find(track::id).loudness > @jelo.loudness.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).loudness < @jelo.loudness.to_f + 2 && RSpotify::AudioFeatures.find(track::id).tempo > @jelo.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).mode == @jelo.mode && RSpotify::AudioFeatures.find(track::id).valence > @jelo.valence.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).valence < @jelo.valence.to_f + 2%>
+          <li><%= track::name %>  </li>
+          <li><%= track::artists[0].name %>  </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+          <audio controls>
+              <source src=<%= track::preview_url %> type="audio/ogg">
+          </audio> 
+          
+    <% end %>
+
+  <% end %>
+  <% else %>
+  <h6> It appears you do not have any yellow colored tracks</h6>
+<% end %>
+</ul>
+
+
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%# Conditions For Customized GREEN PLAYLIST %>
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+<h2>Green:</h2>
+
+<ul> 
+   <% @grean=Green.find_by user_id: current_user.id %>
+    
+   <% if @grean %>
+ <% @alltracks.each do |track| %>
+
+
+    <% if RSpotify::AudioFeatures.find(track::id).tempo > @grean.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).tempo < @grean.tempo.to_f + 2 && RSpotify::AudioFeatures.find(track::id).danceability > @grean.danceability.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).danceability < @grean.danceability.to_f + 2 && RSpotify::AudioFeatures.find(track::id).energy > @grean.energy.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).energy < @grean.energy.to_f + 2 && RSpotify::AudioFeatures.find(track::id).loudness > @grean.loudness.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).loudness < @grean.loudness.to_f + 2 && RSpotify::AudioFeatures.find(track::id).tempo > @grean.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).mode == @grean.mode && RSpotify::AudioFeatures.find(track::id).valence > @grean.valence.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).valence < @grean.valence.to_f + 2%>
+          <li><%= track::name %>  </li>
+          <li><%= track::artists[0].name %>  </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+          <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+          <audio controls>
+              <source src=<%= track::preview_url %> type="audio/ogg">
+          </audio> 
+    <% end %>
+
+  <% end %>
+    
+  <% else %>
+      <h6> It appears you do not have any green colored tracks </h6>
+    <% end %>
+</ul>
+
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%# Conditions For Customized PURPLE PLAYLIST %>
+<%# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+<h2>Purple:</h2>
+
+<ul>
+   <% @perpul=Purple.find_by user_id: current_user.id %>
+      
+   <% if @perpul %>
+    <% @alltracks.each do |track| %>
+        
+        <% @perpul=Purple.find_by user_id: current_user.id %>
+          
+        <% if RSpotify::AudioFeatures.find(track::id).tempo > @perpul.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).tempo < @perpul.tempo.to_f + 2 && RSpotify::AudioFeatures.find(track::id).danceability > @perpul.danceability.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).danceability < @perpul.danceability.to_f + 2 && RSpotify::AudioFeatures.find(track::id).energy > @perpul.energy.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).energy < @perpul.energy.to_f + 2 && RSpotify::AudioFeatures.find(track::id).loudness > @perpul.loudness.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).loudness < @perpul.loudness.to_f + 2 && RSpotify::AudioFeatures.find(track::id).tempo > @perpul.tempo.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).mode == @perpul.mode && RSpotify::AudioFeatures.find(track::id).valence > @perpul.valence.to_f - 2 &&  RSpotify::AudioFeatures.find(track::id).valence < @perpul.valence.to_f + 2%>
+              <li><%= track::name %>  </li>
+              <li><%= track::artists[0].name %>  </li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).tempo %> -- Tempo</li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).danceability %> -- Danceability </li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).energy %> -- Energy </li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).loudness %> -- Loudness </li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).mode %> -- Mode</li>
+              <li><%= RSpotify::AudioFeatures.find(track::id).valence %> -- Valence</li>
+              <audio controls>
+                  <source src=<%= track::preview_url %> type="audio/ogg">
+              </audio> 
+        <% end %>
+      <% end %>
+    <% else %>
+      <h6> It appears you do not have any purple colored tracks</h6>
+    <% end %>
+</ul>
+
+
+
+

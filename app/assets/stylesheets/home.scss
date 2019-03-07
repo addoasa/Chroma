@@ -1,3 +1,146 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.welcome{
+    text-align: right;
+}
+.line-home{
+    width:100%;
+    background-color: rgba(0,0,0,0.5);
+    height:0.5px;
+}
+
+a {
+   
+      background-color:transparent !important;
+}
+a:hover{
+    // color:rgba(0,0,0,0.5) !important;
+    background-color: transparent !important;
+    transition:0.2s;
+
+}  
+
+.home-logout-btn{
+    text-align: right;
+    
+}
+
+.home-login-btn{
+    text-align: right;
+}
+.home-login-btn a:hover{
+    color:rgba(0,0,0,0.5);
+}
+
+.home-title{
+    font-size: 38pt;
+    width:400px;
+    font-weight: 1200;
+}
+
+.home-description{
+    padding-left: 10px;
+    display:inline-block;
+}
+
+.home-container{
+    margin-left:30px;
+    margin-right: 30px; 
+    
+}
+
+.home-listen{
+    text-align: right;
+    font-size: 22pt;
+    font-weight: 200;
+    
+    
+}
+
+.home-listen-paragraph{
+    text-align: right;
+}
+
+.getstarted{
+    font-size: 22pt;
+    font-weight: 200;
+}
+.take-quiz{
+    text-align: center;
+    padding-top: 15px;
+    height:35px;
+    font-size: 10pt;
+    border-bottom: solid rgba(255,255,255,0.3) 2pt;
+    border-top: solid rgba(255,255,255,0.3) 1pt;
+    border-left: solid rgba(255,255,255,0.3) 1pt;
+    border-right: solid rgba(255,255,255,0.3) 2pt;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient( rgba(0,0,0,0.86),rgba(0,0,0,0.9) , rgba(0,0,0,0.75));
+    transition:0.3s;
+}
+
+.take-quiz a{
+    color:white;
+    font-weight:600;
+    font-size: 14pt;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+.take-quiz:hover{
+}
+.quiz-section{
+    margin-top: 40px;
+    display:inline-block;
+}
+.signup-quiz{
+
+    text-align: center;
+    padding-top: 15px;
+    height:35px;
+    font-size: 10pt;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: linear-gradient( rgba(0,0,0,0.86),rgba(0,0,0,0.9) , rgba(0,0,0,0.75));
+    transition:0.3s;
+
+}
+.signup-quiz a{
+    color:white;
+    font-weight:600;
+    font-size: 14pt;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+.listen-section{
+
+}
+.home-footer{
+    width:100vw;
+    height:2px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.background{
+  
+    background-image: url("/assets/color4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
